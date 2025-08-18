@@ -19,7 +19,7 @@ export const useSystemPrompt = () => {
         // First, make Ann introduce herself as a patient
         if (avatarId === "Ann_Therapist_public") {
           await avatarRef.current.speak({
-            text: "Hi, I'm Ann. I've been feeling really anxious and stressed lately, and it's been affecting my sleep. I find myself lying awake at night with my mind racing, and during the day, I feel overwhelmed by even the smallest tasks. It's like there's this weight on my chest, and I can't seem to shake it off. I really just want to feel more at ease and find a way to manage all this anxiety. I hope that through therapy, I can learn some tools to help me cope and maybe even understand what's triggering these feelings. Can you help me with that?",
+            text: "just say hi",
             taskType: TaskType.TALK,
             taskMode: TaskMode.SYNC,
           });
