@@ -16,10 +16,10 @@ export const useSystemPrompt = () => {
       if (!systemPrompt) return;
 
       try {
-        // First, make Ann introduce herself as a patient
+        // First, make Mariem introduce herself as a patient
         if (avatarId === "Ann_Therapist_public") {
           await avatarRef.current.speak({
-            text: "just say hi",
+            text: "just say hi and nothing else",
             taskType: TaskType.TALK,
             taskMode: TaskMode.SYNC,
           });
@@ -48,8 +48,8 @@ export const useSystemPrompt = () => {
 
       // Add scenario-specific context
       const scenarioContext = scenario === 'initial-consultation'
-        ? '\n\nCURRENT SCENARIO: Initial Consultation - You are a new patient meeting your therapist for the first time. Share your concerns and what brings you to therapy.'
-        : '\n\nCURRENT SCENARIO: Follow-up Session - You are continuing therapy with your existing therapist, reviewing progress and discussing ongoing challenges.';
+        ? '\n\nCURRENT SCENARIO: Initial Consultation - You are a new patient meeting your doctor for the first time. Share your skin concerns and what brings you to the doctor.'
+        : '\n\nCURRENT SCENARIO: Follow-up Session - You are continuing medical care with your existing doctor, reviewing progress and discussing ongoing skin issues.';
 
       return basePrompt + scenarioContext;
     },

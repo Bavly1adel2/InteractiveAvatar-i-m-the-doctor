@@ -124,6 +124,7 @@ export const AvatarConfig: React.FC<AvatarConfigProps> = ({
     onConfigChange({ ...config, [key]: value });
   };
   const [showCustomAvatar, setShowCustomAvatar] = useState<boolean>(false);
+  const [showMariemGuide, setShowMariemGuide] = useState<boolean>(false);
 
   const selectedAvatar = useMemo(() => {
     const avatar = AVATARS.find(
@@ -179,18 +180,101 @@ export const AvatarConfig: React.FC<AvatarConfigProps> = ({
           />
         )}
 
-        {/* System Prompt Display */}
+        {/* Toggle Button for Mariem Guide */}
         {isAnnSelected && (
+          <div className="mb-4 flex justify-center">
+            <button
+              onClick={() => setShowMariemGuide(!showMariemGuide)}
+              className={`px-6 py-3 rounded-xl border-2 transition-all duration-300 font-semibold ${
+                showMariemGuide
+                  ? 'border-blue-400 bg-blue-500/20 text-blue-100 shadow-lg'
+                  : 'border-gray-500 bg-gray-600/30 text-gray-200 hover:border-gray-400 hover:bg-gray-500/40'
+              }`}
+            >
+              {showMariemGuide ? '📋 Hide Mariem Guide' : '📋 Show Mariem Guide'}
+            </button>
+          </div>
+        )}
+
+        {/* System Prompt Display - Now Toggleable */}
+        {isAnnSelected && showMariemGuide && (
           <div className="mb-6 p-4 bg-gradient-to-r from-blue-700/30 to-blue-800/30 rounded-2xl border-2 border-blue-600/50">
             <h4 className="text-lg font-semibold text-blue-100 mb-3 text-center">
-              📋 Current System Prompt
+              📋 How Mariem the Patient Works
             </h4>
-            <div className="text-sm text-blue-200 bg-blue-900/30 p-3 rounded-lg border border-blue-500/30 max-h-40 overflow-y-auto">
-              <p className="mb-2"><strong>Session Type:</strong> {selectedScenario === 'initial-consultation' ? 'Initial Consultation' : 'Follow-up Session'}</p>
-              <p className="mb-2 text-yellow-300"><strong>Role:</strong> You are the therapist, Ann is your patient</p>
-              <p className="text-xs leading-relaxed">
-                {AVATAR_SYSTEM_PROMPTS["Ann_Therapist_public"]}
+            
+            {/* Quick Start Guide */}
+            <div className="mb-4 p-3 bg-blue-900/30 rounded-lg border border-blue-500/30">
+              <h5 className="text-sm font-semibold text-blue-200 mb-2">🚀 Quick Start Guide:</h5>
+              <ol className="text-xs text-blue-200 space-y-1 list-decimal list-inside">
+                <li>Select "mariem the Patient" avatar</li>
+                <li>Choose session type (Initial or Follow-up)</li>
+                <li>Click "Start" to begin</li>
+                <li>Mariem will say "hi" and wait for you</li>
+                <li>You are the doctor - ask questions and provide care</li>
+              </ol>
+            </div>
+
+            {/* Role Information */}
+            <div className="mb-4 p-3 bg-green-900/30 rounded-lg border border-green-500/30">
+              <h5 className="text-sm font-semibold text-green-200 mb-2">👨‍⚕️ Your Role:</h5>
+              <p className="text-xs text-green-200">
+                <strong>You are the doctor</strong> - Mariem is your patient with skin issues. Ask questions, provide diagnosis, and offer treatment.
               </p>
+            </div>
+
+            {/* Session Type Info */}
+            <div className="mb-4 p-3 bg-purple-900/30 rounded-lg border border-purple-500/30">
+              <h5 className="text-sm font-semibold text-purple-200 mb-2">🏥 Session Type:</h5>
+              <p className="text-xs text-purple-200">
+                <strong>Current:</strong> {selectedScenario === 'initial-consultation' ? 'Initial Consultation' : 'Follow-up Session'}
+              </p>
+              <p className="text-xs text-purple-300 mt-1">
+                {selectedScenario === 'initial-consultation' 
+                  ? 'First meeting - Mariem will share her skin concerns and medical history'
+                  : 'Ongoing care - Mariem will discuss progress and current symptoms'
+                }
+              </p>
+            </div>
+
+            {/* How Avatar Reacts */}
+            <div className="mb-4 p-3 bg-yellow-900/30 rounded-lg border border-yellow-500/30">
+              <h5 className="text-sm font-semibold text-yellow-200 mb-2">🎭 How Mariem Reacts:</h5>
+              <ul className="text-xs text-yellow-200 space-y-1 list-disc list-inside">
+                <li>She's anxious and worried about her skin condition</li>
+                <li>Uses simple, emotional language (not medical jargon)</li>
+                <li>Asks questions when confused or concerned</li>
+                <li>Shares personal impact on daily life</li>
+                <li>Shows vulnerability and genuine concern</li>
+              </ul>
+            </div>
+
+            {/* Q&A System */}
+            <div className="mb-4 p-3 bg-orange-900/30 rounded-lg border border-orange-500/30">
+              <h5 className="text-sm font-semibold text-orange-200 mb-2">💬 Q&A Knowledge Base:</h5>
+              <p className="text-xs text-orange-200 mb-2">
+                Mariem has responses for common questions about:
+              </p>
+              <div className="grid grid-cols-2 gap-1 text-xs text-orange-300">
+                <span>• Symptoms & timeline</span>
+                <span>• Family history</span>
+                <span>• Treatment attempts</span>
+                <span>• Sleep issues</span>
+                <span>• Emotional impact</span>
+                <span>• Clothing concerns</span>
+              </div>
+            </div>
+
+            {/* Tips for Best Experience */}
+            <div className="p-3 bg-indigo-900/30 rounded-lg border border-indigo-500/30">
+              <h5 className="text-sm font-semibold text-indigo-200 mb-2">💡 Tips for Best Experience:</h5>
+              <ul className="text-xs text-indigo-200 space-y-1 list-disc list-inside">
+                <li>Ask specific questions about her skin symptoms</li>
+                <li>Use medical terminology - she'll ask for clarification</li>
+                <li>Show empathy - she's genuinely worried</li>
+                <li>Give her time to express her concerns</li>
+                <li>Provide clear explanations - she's not a medical expert</li>
+              </ul>
             </div>
           </div>
         )}

@@ -18,7 +18,7 @@ export const ScenarioSelector: React.FC<ScenarioSelectorProps> = ({
   return (
     <div className="mb-6 p-4 bg-gradient-to-r from-gray-700/50 to-gray-800/50 rounded-2xl border-2 border-gray-600/50">
       <h3 className="text-lg font-semibold text-white mb-4 text-center">
-        🧠 Select Therapy Session Type
+        🏥 Select Medical Consultation Type
       </h3>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -51,7 +51,7 @@ export const ScenarioSelector: React.FC<ScenarioSelectorProps> = ({
             <div className="text-2xl mb-2">🔄</div>
             <div className="font-semibold">Follow-up Session</div>
             <div className="text-sm opacity-80 mt-1">
-              Continuing work with existing patient
+              Continuing care with existing patient
             </div>
           </div>
         </button>
@@ -62,7 +62,7 @@ export const ScenarioSelector: React.FC<ScenarioSelectorProps> = ({
           <strong>Current Session Type:</strong> {selectedScenario === 'initial-consultation' ? 'Initial Consultation' : 'Follow-up Session'}
         </p>
         <p className="text-xs text-gray-400 text-center mt-1">
-          You are the therapist, Ann is your patient
+          You are the doctor, Mariem is your patient
         </p>
       </div>
     </div>

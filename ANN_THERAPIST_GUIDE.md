@@ -1,142 +1,189 @@
-# Ann Patient Avatar System Guide
+# Mariem Patient Avatar - Complete User Guide
 
-## Overview
-Ann is now a patient seeking therapy, and you are the therapist providing care. She can interact with you in two different scenarios:
-1. **Initial Consultation** - First meeting with a new patient
-2. **Follow-up Session** - Continuing work with an existing patient
+## 🎯 What This Is
+Mariem is an AI avatar that acts as a **real patient** with skin issues. You are the **doctor** who will diagnose and treat her. This is a medical consultation simulation where Mariem will react naturally to your questions and medical expertise.
 
-## Features
+## 🚀 How to Get Started (3 Simple Steps)
 
-### Avatar Selection
-- Ann appears as "Ann Patient" in the avatar selection
-- Uses a professional headshot representing a patient seeking help
-- Automatically shows scenario selector when selected
+### Step 1: Select Mariem
+- Look for "mariem the Patient" in the avatar selection
+- Click on her to select (she'll have a blue ring around her)
 
-### Scenario Selection
-- **Initial Consultation**: You meet Ann as a new patient for the first time
-- **Follow-up Session**: You continue work with Ann as an existing patient
-- Scenario selector appears below avatar selection
-- System prompt automatically updates based on selected scenario
+### Step 2: Choose Session Type
+- **Initial Consultation** (🆕): First meeting - Mariem is a new patient
+- **Follow-up Session** (🔄): Continuing care - Mariem is returning for follow-up
 
-### System Prompt Integration
-- Comprehensive patient background and presenting concerns
-- Patient's therapeutic goals and challenges
-- Scenario-specific responses and patient needs
-- Automatic application when session starts
+### Step 3: Start the Session
+- Click the "Start" button
+- Mariem will say "hi" and wait for you to begin
+- You're now the doctor - start asking questions!
 
-## How to Use
+---
 
-### 1. Select Ann Patient Avatar
-- Choose "Ann Patient" from the avatar list
-- The scenario selector will automatically appear
+## 👨‍⚕️ Your Role as the Doctor
 
-### 2. Choose Session Type
-- **Initial Consultation**: For first-time patient meetings
-- **Follow-up Session**: For ongoing therapeutic work
-- The system prompt will update to reflect your choice
+**You are the medical professional.** Mariem is your patient who needs help with:
+- Dry, itchy, red, inflamed skin on arms and neck
+- Symptoms that started months ago and keep getting worse
+- Sleep problems due to constant itching
+- Emotional distress from the condition
 
-### 3. Start Session
-- Click "Start" to begin the avatar session
-- Ann will automatically receive her system prompt as a patient
-- She will introduce herself and share her concerns
+**Your job:** Ask questions, provide diagnosis, explain treatment options, and show empathy.
 
-### 4. Provide Therapy
-- You are now the therapist providing care to Ann
-- Ask questions, provide guidance, and offer therapeutic interventions
-- Maintain professional boundaries while being supportive
+---
 
-## Character Details
+## 🎭 How Mariem Behaves (She's Not a Robot!)
 
-### Patient Background
-- **Presenting Concerns**: Anxiety, stress, sleep difficulties, feeling overwhelmed
-- **Goals**: Seeking help and guidance for mental health challenges
-- **Approach**: Open, honest, willing to work with therapist
-- **Setting**: Therapy office
+### Mariem's Personality
+- **Anxious & Worried**: She's genuinely concerned about her skin
+- **Emotional**: Shows real frustration, fear, and hope
+- **Curious**: Asks questions when she doesn't understand medical terms
+- **Vulnerable**: Shares personal details about how this affects her life
+- **Persistent**: Wants clear answers and won't give up easily
 
-### Patient Style
-- Open and honest about struggles
-- Willing to share thoughts and feelings
-- Asks questions when needing clarification
-- Collaborative and engaged in therapy
+### How She Talks
+- Uses simple, everyday language (not medical jargon)
+- Shows emotions: "I'm really worried about this", "It's been so frustrating"
+- Asks follow-up questions: "What does that mean?", "Is that serious?"
+- Shares personal impact: "I can't sleep at night", "I'm embarrassed to wear short sleeves"
 
-### Session Types
+---
 
-#### Initial Consultation
-- Ann introduces herself and shares concerns
-- You gather background information
-- You identify presenting concerns
-- You set therapeutic goals
-- You explain your therapeutic approach
+## 💬 Q&A System - How Mariem Knows What to Say
 
-#### Follow-up Session
-- You check in on Ann's progress
-- You review and practice skills together
-- You adjust goals as needed
-- You provide ongoing support
-- You review homework assignments
+### What Mariem Knows
+Mariem has a built-in knowledge base with responses to common medical questions:
 
-## Technical Implementation
+**Symptoms & History:**
+- When symptoms started and how they've progressed
+- What she's tried so far (moisturizers, creams)
+- Family history (mother has asthma)
+- Previous skin issues
 
-### Files Modified
-- `app/lib/constants.ts` - Updated Ann Patient system prompts
-- `components/AvatarConfig/ScenarioSelector.tsx` - Updated for patient scenarios
-- `components/AvatarConfig/index.tsx` - Integrated patient role display
-- `components/logic/useSystemPrompt.ts` - Patient system prompt management
-- `components/InteractiveAvatar.tsx` - Integrated patient system prompt application
-- `app/lib/ann-therapist-qa.ts` - Q&A responses for patient scenarios
+**Daily Life Impact:**
+- Sleep problems from itching
+- Embarrassment about visible skin issues
+- Clothing choices affected by condition
+- Emotional toll of persistent symptoms
 
-### System Prompt Structure
-- Patient background and presenting concerns
-- Scenario-specific instructions
-- Patient's therapeutic goals and challenges
-- Response examples and patient needs
+**Treatment Concerns:**
+- Worries about corticosteroids
+- Questions about long-term management
+- Hope for relief and answers
 
-### Automatic Application
-- System prompt is applied when session starts
-- Waits 1 second for session establishment
-- Sends patient introduction message
-- Logs successful application
+### How It Works
+1. **You ask a question** (e.g., "When did this start?")
+2. **Mariem's AI brain** finds the best response from her knowledge base
+3. **She responds naturally** as Mariem the patient, not as a script
+4. **She stays in character** throughout the entire conversation
 
-## Testing
+---
 
-### Initial Consultation Scenario
-- Ann will introduce herself as a new patient
-- She'll share her concerns and what brings her to therapy
-- Tone: Open, honest, seeking help
+## 🏥 Session Types Explained
 
-### Follow-up Session Scenario
-- Ann will discuss her ongoing progress
-- She'll focus on current challenges and goals
-- Tone: Engaged, collaborative, focused on growth
+### Initial Consultation (🆕)
+**What happens:**
+- Mariem is a new patient meeting you for the first time
+- She'll share her skin concerns and medical history
+- You gather information to make a diagnosis
+- You explain your findings and treatment plan
 
-## Troubleshooting
+**Best questions to ask:**
+- "What brings you in today?"
+- "When did these symptoms start?"
+- "What have you tried so far?"
+- "Does anyone in your family have similar issues?"
 
-### System Prompt Not Applied
-- Check console for error messages
-- Ensure Ann Patient avatar is selected
-- Verify scenario is selected before starting session
+### Follow-up Session (🔄)
+**What happens:**
+- Mariem is returning for ongoing care
+- She'll discuss how treatment is working
+- You check progress and adjust the plan
+- You address any new concerns
 
-### Avatar Not Responding Appropriately
-- Check that system prompt was applied successfully
-- Verify correct scenario is selected
-- Restart session if needed
+**Best questions to ask:**
+- "How has your skin been since our last visit?"
+- "Is the treatment helping with the itching?"
+- "Are you experiencing any side effects?"
+- "What concerns do you have today?"
 
-## Future Enhancements
+---
 
-### Potential Additions
-- More specific patient concerns and symptoms
-- Different patient populations and diagnoses
-- Crisis intervention responses
-- Family therapy scenarios
-- Group therapy sessions
+## 💡 Pro Tips for the Best Experience
 
-### Integration Opportunities
-- Mental health assessment tools
-- Treatment planning systems
-- Progress tracking
-- Patient education materials
-- Referral systems
+### Ask Good Questions
+✅ **Do:**
+- Ask specific questions: "Where exactly is the rash?"
+- Use medical terms: "Have you noticed any atopic dermatitis?"
+- Show empathy: "I understand this must be frustrating"
+- Give her time to answer fully
 
-## Support
+❌ **Don't:**
+- Rush through questions
+- Use only complex medical jargon
+- Ignore her emotional concerns
+- Make assumptions about her symptoms
 
-For technical issues or questions about the Ann Patient avatar system, please refer to the main project documentation or contact the development team.
+### Understand Mariem's Responses
+- **She's not perfect** - sometimes she might not understand complex medical terms
+- **She's consistent** - her personality and knowledge stay the same throughout
+- **She's realistic** - she reacts like a real patient would
+- **She's helpful** - she'll share relevant information when you ask the right questions
+
+---
+
+## 🔧 Technical Details (For Advanced Users)
+
+### How the System Works
+1. **Avatar Selection**: Mariem uses the "Ann_Therapist_public" avatar ID but behaves as a patient
+2. **System Prompt**: Gives Mariem her personality, knowledge, and behavior instructions
+3. **Q&A Database**: Contains responses to common medical questions
+4. **AI Processing**: Mariem's responses are generated based on your questions and her knowledge base
+
+### Files That Control Mariem
+- `constants.ts`: Contains Mariem's personality and system instructions
+- `ann-therapist-qa.ts`: Contains her knowledge base and responses
+- `useSystemPrompt.ts`: Applies her personality when the session starts
+
+---
+
+## 🆘 Troubleshooting
+
+### Mariem Not Responding?
+- Make sure you've selected "mariem the Patient"
+- Check that you've chosen a session type
+- Try restarting the session
+- Ensure your microphone is working
+
+### Mariem Acting Strange?
+- She should always stay in character as a patient
+- If she sounds like a doctor, restart the session
+- Make sure the system prompt was applied (check console)
+
+### Session Not Starting?
+- Verify you have a stable internet connection
+- Check that all required permissions are granted
+- Try refreshing the page and starting over
+
+---
+
+## 🎯 Quick Reference
+
+**Your Role:** Doctor providing medical care
+**Mariem's Role:** Patient with skin issues seeking help
+**Start:** Select avatar → Choose session → Click Start
+**First Words:** Mariem says "hi" and waits for you
+**Best Approach:** Ask specific questions, show empathy, explain clearly
+**Goal:** Provide medical consultation and help Mariem understand her condition
+
+---
+
+## 📞 Need Help?
+
+If you're having technical issues:
+1. Check the browser console for error messages
+2. Ensure all files are properly loaded
+3. Try a different browser or device
+4. Contact technical support if problems persist
+
+**Remember:** Mariem is designed to be a realistic patient. The more naturally you interact with her, the better the experience will be!
