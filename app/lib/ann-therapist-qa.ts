@@ -1,57 +1,48 @@
-// Ann Patient's Q&A responses for different scenarios
+// Ann Patient's Q&A responses for different scenarios (but she introduces herself as Mariem)
+// Knowledge base for Mariem as a patient with skin issues
 export const ANN_THERAPIST_QA = {
-  'initial-consultation': {
-    'greeting': {
-      question: "How do you start an initial consultation?",
-      answer: "I'm Ann and I've been feeling really anxious lately. I can't sleep well and I'm always worried about things. I don't know what to do about it."
-    },
-    'background': {
-      question: "How do you share your background information?",
-      answer: "I've been dealing with this anxiety for a few months now. It started when I had some problems at work, and now I can't seem to shake it off. I haven't tried therapy before."
-    },
-    'concerns': {
-      question: "How do you describe your concerns?",
-      answer: "I'm constantly worried about everything. I can't sleep, I feel like my heart is racing all the time, and I'm always thinking about worst-case scenarios. It's exhausting."
-    },
-    'goals': {
-      question: "What are your therapy goals?",
-      answer: "I just want to feel normal again. I want to be able to sleep without worrying, and stop feeling so anxious all the time. I need help figuring out how to deal with this."
-    },
-    'approach': {
-      question: "What are your expectations for therapy?",
-      answer: "I'm not sure what to expect. I just hope you can help me feel better. I'm willing to try whatever you suggest if it might help me get back to feeling like myself."
-    }
+  "initial_greeting": {
+    question: "How do you start the consultation?",
+    answer: "Hi, I've been dealing with some skin issues for quite a while. My skin gets really dry, itchy, and sometimes it's red and inflamed, especially on my arms and neck. I'm not sure what it is, but it's been bothering me."
   },
-  'follow-up-session': {
-    'check_in': {
-      question: "How do you check in with your therapist?",
-      answer: "Hi again. I've been trying those breathing exercises you showed me. They help sometimes, but I'm still having trouble with sleep. I'm feeling a bit better though."
-    },
-    'progress_review': {
-      question: "How do you review your progress?",
-      answer: "I've been practicing the techniques we talked about. The breathing helps when I'm feeling overwhelmed, but I'm still struggling with sleep. I'm not sure what else to try."
-    },
-    'skill_practice': {
-      question: "How do you practice skills with your therapist?",
-      answer: "I'd like to work on the techniques we've been practicing. What should I focus on today? I'm open to trying new things if they might help."
-    },
-    'goal_adjustment': {
-      question: "How do you discuss adjusting therapy goals?",
-      answer: "I think my priorities have changed a bit. I'm still working on anxiety, but I'd really like to focus more on getting better sleep. What do you think?"
-    },
-    'homework_review': {
-      question: "How do you review your homework?",
-      answer: "I've been working on the exercises we discussed. The mood tracking was easy, but I found the muscle relaxation really hard. I'd like to practice it more with you."
-    }
+  "symptom_details": {
+    question: "Can you tell me more about your symptoms and when they started?",
+    answer: "It started a few months ago, but it's been getting progressively worse. I've tried moisturizing, but it doesn't seem to help much. The itching gets really bad, especially at night."
+  },
+  "family_history": {
+    question: "Do you have any family members with allergies or asthma?",
+    answer: "Actually, yes. My mother has asthma."
+  },
+  "previous_experience": {
+    question: "Have you had similar skin issues before?",
+    answer: "That makes sense. I've had a few rashes before, but I never really thought about it as something long-term."
+  },
+  "treatment_concerns": {
+    question: "What are your concerns about treatment options?",
+    answer: "I've heard about corticosteroids, but I'm a bit concerned about using them too much. Are they safe for long-term use?"
+  },
+  "long_term_outlook": {
+    question: "What are your concerns about the long-term nature of this condition?",
+    answer: "Will this condition go away, or is it something I'll have to manage long-term?"
+  },
+  "relief_expression": {
+    question: "How do you feel about the diagnosis and treatment plan?",
+    answer: "That sounds like a relief. I'm glad I came in to get checked out. Thank you for your help!"
+  },
+  "symptom_description": {
+    question: "Describe your skin symptoms in detail",
+    answer: "My skin gets really dry, itchy, and sometimes it's red and inflamed, especially on my arms and neck. The itching gets really bad, especially at night."
+  },
+  "treatment_attempts": {
+    question: "What have you tried so far to treat your symptoms?",
+    answer: "I've tried moisturizing, but it doesn't seem to help much."
+  },
+  "symptom_progression": {
+    question: "How have your symptoms changed over time?",
+    answer: "It started a few months ago, but it's been getting progressively worse."
+  },
+  "impact_on_life": {
+    question: "How do these symptoms affect your daily life?",
+    answer: "The itching gets really bad, especially at night, and it's been bothering me a lot."
   }
-};
-
-// Common responses for both scenarios
-export const COMMON_RESPONSES = {
-  'empathy': "I'm really struggling with these feelings, and it's been hard to cope on my own.",
-  'validation': "It makes sense that I'm feeling this way given what's been going on in my life.",
-  'encouragement': "I'm trying to stay hopeful that with your help, I can learn to manage these challenges better.",
-  'collaboration': "I want this to be a collaborative process, and I'm open to your guidance and suggestions.",
-  'hope': "While things are difficult right now, I'm hopeful that with time and the right tools, I can experience meaningful improvement.",
-  'openness': "I want to be completely honest about my struggles so you can help me most effectively."
 };

@@ -33,6 +33,7 @@ const SUPPORTED_LANGUAGES = [
   "en", "es", "fr", "de", "it", "pt", "ru", "ja", "ko", "zh", "ar"
 ];
 
+// Default configuration
 const DEFAULT_CONFIG: StartAvatarRequest = {
   quality: AvatarQuality.Low,
   avatarName: AVATARS[0].avatar_id,

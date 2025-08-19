@@ -94,7 +94,7 @@ const AvatarCard: React.FC<{
             </h3>
             <p className={`text-xs transition-colors duration-300 ${
               isSelected ? 'text-gray-200/80' : 'text-gray-400'
-            }`}>
+            }`} style={{ opacity: 0, height: 0, overflow: 'hidden' }}>
               {avatar.avatar_id}
             </p>
           </div>
