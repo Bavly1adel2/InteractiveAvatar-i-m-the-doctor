@@ -482,9 +482,9 @@ function InteractiveAvatar() {
                   🔄 Try Multiple Configs
                 </Button>
               </div> */}
-              {/* <p className="text-gray-300 text-xs text-center px-2 sm:px-0 font-medium">
+              <p className="text-gray-300 text-xs text-center px-2 sm:px-0 font-medium">
                 ✨ Type your messages and the avatar will respond with voice and video ✨
-              </p> */}
+              </p>
             </div>
           ) : (
             <div className="flex justify-center">
@@ -495,11 +495,11 @@ function InteractiveAvatar() {
       </div>
       
       {/* Message History - Dark theme */}
-      {/* {sessionState === StreamingAvatarSessionState.CONNECTED && (
+      {sessionState === StreamingAvatarSessionState.CONNECTED && (
         <div className="flex-shrink-0 max-h-32 sm:max-h-48 overflow-y-auto mx-2 sm:mx-4 mb-2 sm:mb-4 bg-gradient-to-r from-gray-700/50 to-gray-800/50 rounded-2xl border-2 border-gray-600/50 p-3">
           <MessageHistory />
         </div>
-      )} */}
+      )}
     </div>
   );
 }

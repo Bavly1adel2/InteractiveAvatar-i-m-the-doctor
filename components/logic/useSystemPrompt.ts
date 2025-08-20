@@ -16,16 +16,7 @@ export const useSystemPrompt = () => {
       if (!systemPrompt) return;
 
       try {
-        // First, make Mariem introduce herself as a patient
-        if (avatarId === "Ann_Therapist_public") {
-          await avatarRef.current.speak({
-            text: "just say hi and nothing else",
-            taskType: TaskType.TALK,
-            taskMode: TaskMode.SYNC,
-          });
-        }
-
-        // Then apply the system prompt silently for context
+        // Apply the system prompt silently for context without speaking
         await avatarRef.current.speak({
           text: `System: ${systemPrompt}`,
           taskType: TaskType.TALK,
